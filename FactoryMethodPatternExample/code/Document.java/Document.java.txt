@@ -1,0 +1,5 @@
+package FacroryDesignPattern;
+
+public interface Document {
+    void open();
+}

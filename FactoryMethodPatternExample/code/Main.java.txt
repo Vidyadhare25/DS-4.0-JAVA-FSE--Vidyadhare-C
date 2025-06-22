@@ -1,0 +1,18 @@
+package FacroryDesignPattern;
+
+public class Main {
+    public static void main(String[] args) {
+        DocumentFactory WordFactory = new WordDocumentFactory();
+        Document wordDoc = WordFactory.createDocument();
+        wordDoc.open();
+
+        DocumentFactory PdfFactory = new PdfDocumentFactory();
+        Document pdfDoc = PdfFactory.createDocument();
+        pdfDoc.open();
+
+        DocumentFactory ExcelFactory = new ExcelDocumentFactory();
+        Document excelDoc = ExcelFactory.createDocument();
+        excelDoc.open();
+
+    }
+}
