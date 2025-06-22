@@ -1,0 +1,38 @@
+Recursion means a function calling itself to solve a smaller part of the same problem.
+Instead of solving the whole problem at once, it solves one part and lets the same function handle the rest.
+This keeps happening until we reach a simple case where we already know the answer —
+this is called the base case, and it stops the process.
+
+For example, in financial forecasting,
+we can use recursion to calculate the value year by year.
+The function keeps calling itself for fewer years
+until the number of years becomes zero.
+-------------------------------------------------
+Time Complexity of Financial Forecasting:
+
+In recursive financial forecasting program,
+the function calls itself again and again — once for each year.
+
+So if we want to predict for 5 years, it calls itself 5 times.
+If it’s for 100 years, it makes 100 recursive calls.
+
+That means the time taken grows linearly with the number of years.
+
+This kind of time complexity is called O(n) —
+where n is the number of years we’re forecasting.
+
+So, more years = more time.
+
+-----------------------------------------------------
+How to Optimize the Recursive Solution:
+
+In FinancialForecasting recursive method, the function calls itself again and again for each year.
+If we call the same values many times, it can slow things down.
+
+To avoid extra work, we can use a method called memoization —
+which means storing the results of previous calculations.
+So, next time if we need the same result, we just look it up instead of calculating again.
+
+Another way is to use a loop (called an iterative approach) instead of recursion.
+Loops don’t need to use memory for each call, so they are faster and more efficient.
+
