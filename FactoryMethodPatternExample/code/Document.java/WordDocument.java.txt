@@ -1,0 +1,8 @@
+package FacroryDesignPattern;
+
+public class WordDocument implements Document{
+    @Override
+    public void open(){
+        System.out.println("In a Word DOcument");
+    }
+}

@@ -1,0 +1,42 @@
+package com.example;
+
+import org.junit.Before;
+import org.junit.After;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CalculatorTest {
+
+    private Calculator calc;
+
+    // Runs before every test
+    @Before
+    public void setUp() {
+        calc = new Calculator();  // Arrange
+        System.out.println("Setting up...");
+    }
+
+    // Runs after every test
+    @After
+    public void tearDown() {
+        System.out.println("Tearing down...");
+    }
+
+    @Test
+    public void testAdd() {
+        // Act
+        int result = calc.add(10, 5);
+
+        // Assert
+        assertEquals(15, result);
+    }
+
+    @Test
+    public void testSubtract() {
+        // Act
+        int result = calc.subtract(10, 4);
+
+        // Assert
+        assertEquals(6, result);
+    }
+}

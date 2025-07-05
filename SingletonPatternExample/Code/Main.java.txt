@@ -1,0 +1,18 @@
+package Singletonex1;
+
+public class Main {
+    public static void main(String[] arg){
+
+        Logger logger1 = Logger.getLogger();
+        logger1.log("First message");
+
+        Logger logger2 = Logger.getLogger();
+        logger2.log("Second Message");
+
+        if(logger1 == logger2){
+            System.out.println("Both are Same,Singleton");
+        }else{
+            System.out.println("Different Object,Error");
+        }
+    }
+}

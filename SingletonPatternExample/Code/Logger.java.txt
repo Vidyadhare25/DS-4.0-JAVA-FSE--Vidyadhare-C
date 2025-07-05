@@ -1,0 +1,19 @@
+package Singletonex1;
+
+public class Logger {
+
+    static Logger obj;
+
+    private Logger(){
+        System.out.println("Logger Created");
+    }
+    public static Logger getLogger(){
+        if(obj == null){
+            obj = new Logger();
+        }
+        return obj;
+    }
+    public void log(String message){
+        System.out.println(message);
+    }
+}
