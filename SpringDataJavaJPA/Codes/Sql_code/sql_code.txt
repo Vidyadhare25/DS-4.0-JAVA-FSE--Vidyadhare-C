@@ -1,0 +1,12 @@
+CREATE SCHEMA ormlearn;
+USE ormlearn;
+CREATE TABLE country (
+co_code varchar(2) PRIMARY KEY,
+co_name varchar(50));
+
+INSERT IGNORE INTO country (co_code,co_name)
+VALUES 
+('IN','India'),
+('US','United States of America');
+
+SELECT * FROM country;
