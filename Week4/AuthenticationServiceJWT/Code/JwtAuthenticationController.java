@@ -17,7 +17,7 @@ public class JwtAuthenticationController {
 	
 	 @RequestMapping(value = "/authenticate", method = RequestMethod.GET)
 	    public ResponseEntity<?> generateToken(@RequestHeader("Authorization") String authHeader) {
-	        // Extract username and password from Basic Auth header
+	        // Extract username and password
 	        String base64Credentials = authHeader.substring("Basic ".length()).trim();
 	        byte[] credDecoded = Base64.getDecoder().decode(base64Credentials);
 	        String credentials = new String(credDecoded, StandardCharsets.UTF_8);
@@ -27,9 +27,7 @@ public class JwtAuthenticationController {
 
 	        System.out.println("Username: " + username + ", Password: " + password);
 
-	        // TODO: Add proper validation here if needed
 
-	        // Generate token
 	        String token = jwtutil.generateToken(username);
 
 	        // Return token
